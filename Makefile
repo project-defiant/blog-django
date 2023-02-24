@@ -17,18 +17,18 @@ clean:
 
 typecheck:
 	. .venv/bin/activate
-	mypy ./my-app
+	mypy ./src
 
 format:
 	. .venv/bin/activate
-	@isort ./my-app ./tests
-	@black ./my-app ./tests
-	@docformatter --in-place ./my-app ./tests
+	@isort ./src ./tests
+	@black ./src ./tests
+	@docformatter --in-place ./src ./tests
 
 lint:
 	. .venv/bin/activate
-	flake8 ./my-app
-	pylint ./my-app
+	flake8 ./src
+	pylint ./src
 
 test:
 	. .venv/bin/activate
