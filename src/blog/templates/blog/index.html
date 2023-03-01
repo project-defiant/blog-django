@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block page_title %} My blog {% endblock page_title %}
+{% block css_files %} 
+    <link rel="stylesheet" href="{% static 'blog/index.css' %}?{% now " u"="" %}"="" "> 
+    <link rel="stylesheet" href="{% static 'components/post.css'%}">
+
+{% endblock css_files %}
+
+{% block content %} 
+
+    <section id="welcome" class="hero-section__container">
+        <div class="hero-image__container">    
+            <img 
+                class="hero-image"
+                src="{% static 'hero__image.png' %}" 
+                alt="This is Anna" 
+            >
+        </div>
+        <div class="hero-section__content">
+            <h2 class="hero-section__heading">Hello there</h2>
+            <p class="hero-section__text">
+            My name is Anna and I love to blog about project development
+            </p>
+        </div>
+    </section>
+
+
+    <section class="content__container" id="latest-posts">
+        <h2 class="content__heading">My latest posts</h2>
+        <ul class="post__container">
+        {% for post in  latest_posts %}
+            {% include "components/post.html" %}
+        {% endfor %}
+        </ul>
+
+    </section>
+   
+{% endblock content %}

@@ -1,0 +1,44 @@
+:root {
+  --main-bg-color: brown;
+}
+
+.hero-section__container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+.hero-section__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero-image__container {
+  margin: 0 2rem 2rem 2rem;
+}
+.hero-image {
+  width: 200px;
+  height: 200px;
+}
+
+.hero-section__heading {
+  margin: 2rem;
+  word-spacing: 0.5rem;
+  font-size: 1.8rem;
+}
+.hero-section__text {
+  color: rgb(85, 85, 85);
+}
+
+@media screen and (width >= 800px) {
+  .hero-image {
+    min-width: 300px;
+    min-height: 300px;
+  }
+  .hero-section__container {
+    flex-direction: row;
+  }
+}

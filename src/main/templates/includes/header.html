@@ -1,0 +1,23 @@
+<header class="header">
+  <h1 class="header__heading">
+    <a href="{% url 'index-page' %}" class="header__link">
+      <span class="header__heading--text">Anu</span><span class="header__heading--inner">sz</span><span class="header__heading--text">k</span><span class="header__heading--last-letter">a</span>
+    </a>
+  </h1>
+  <h2 class="header__subheading">Anna Szyszkowska</h2>
+  <nav class="navigation">
+    <div class="hamburger-box__container">
+      <div class="hamburger-box">
+        <div class="hamburger-box__elem hamburger-box__elem--top"></div>
+        <div class="hamburger-box__elem hamburger-box__elem--middle"></div>
+        <div class="hamburger-box__elem hamburger-box__elem--bottom"></div>
+      </div>
+    </div>
+    <div class="navigation-link__container">
+      <a class="navigation__link navigation__link--all-posts" href="{% url 'posts-page' %}">All posts</a>
+      <a class="navigation__link navigation__link--about-me" href="">About me</a>
+      <a class="navigation__link navigation__link--my-work" href="">My work</a>
+      <a class="navigation__link navigation__link--contact" href="">Contact</a>
+    </div>
+  </nav>
+</header>

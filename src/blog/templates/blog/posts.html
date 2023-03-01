@@ -1,0 +1,28 @@
+{% extends "layout.html"%}
+{% load static %}
+
+{% block page_title %}
+All my posts
+{% endblock page_title %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static "components/post.css" %}">
+{% endblock css_files %}
+
+{% block content %}
+
+<section class="content__container" id="all__posts">
+    <h2 class="content__heading">My Collected posts</h2>
+    <ul class="post__container">
+    {% for post in posts %}
+        {% include "components/post.html" %}
+    {% endfor %}
+ 
+    </ul>
+
+</section>
+
+
+
+{% endblock content %}
+

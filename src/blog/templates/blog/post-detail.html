@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+
+
+{% block page_title %} 
+{{ post.title }}
+{% endblock page_title %}
+
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'blog/post-detail.css' %}">
+
+{% endblock css_files %}
+
+
+
+{% block content %}
+<main class="main__container">
+    <section class="post-summary__container section__container">
+        <h2 class="post-summary__title">{{ post.title }}</h2>
+        <div class="post-summary__details">
+            <img class="post-summary__image" src="{% static post.author_image %}" alt="{{ post.author }}">
+            <div class="post-summary__text">
+                <h3 class="post-summary__author">{{ post.author }}</h3>
+                <h3 class="post-summary__update-time">
+                    Last updated on <time>{{ post.date }}</time>
+                </h3>
+            </div>
+
+        </div>
+        <img class="post-entry__image" src="{% static 'blog/'|add:post.image %}" alt="{{ post.title }}"/>
+           
+    </section>
+    <section class="post-entry__container section__container">
+        <article class="post-entry__content">
+
+        <p class="post-entry__content">
+            {{ post.content }}
+        </p>
+        </article>
+    </section>
+</main>
+{% endblock content %}
