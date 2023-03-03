@@ -37,3 +37,6 @@ test:
 changelog:
 	. .venv/bin/activate
 	towncrier
+
+start-db:
+	docker compose --env-file .env up -d
